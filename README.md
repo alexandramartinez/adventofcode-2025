@@ -4,16 +4,16 @@ DataWeave solutions to [adventofcode.com](https://adventofcode.com) puzzles, sol
 
 ## Solutions
 
-| Day | Part | Claude | CurieTech | Benchmark |
-|-----|------|--------|-----------|-----------|
-| 1 | 1 | [✅](scripts/day1/part1/claude/transform.dwl) | [✅](scripts/day1/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday1%2Fpart1%2Fbenchmark) |
-| 1 | 2 | [✅](scripts/day1/part2/claude/transform.dwl) | [✅](scripts/day1/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday1%2Fpart2%2Fbenchmark) |
-| 2 | 1 | [✅](scripts/day2/part1/claude/transform.dwl) | [✅](scripts/day2/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart1%2Fbenchmark) |
-| 2 | 2 | [✅](scripts/day2/part2/claude/transform.dwl) | [✅](scripts/day2/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart2%2Fbenchmark) |
+| Day | Part | Claude | CurieTech | Exec Time | Claude Notes | Curie Notes |
+|-----|------|--------|-----------|-----------|-------------|-------------|
+| 1 | 1 | [script](scripts/day1/part1/claude/transform.dwl) | [script](scripts/day1/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday1%2Fpart1%2Fbenchmark) | | |
+| 1 | 2 | [script](scripts/day1/part2/claude/transform.dwl) | [script](scripts/day1/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday1%2Fpart2%2Fbenchmark) | | ❌ Needed 2 tries (wrong answer first). |
+| 2 | 1 | [script](scripts/day2/part1/claude/transform.dwl) | [script](scripts/day2/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart1%2Fbenchmark) | ❌ Needed 2 tries (DW error — no code execution). | ✅ Uses typed function signatures. |
+| 2 | 2 | [script](scripts/day2/part2/claude/transform.dwl) | [script](scripts/day2/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart2%2Fbenchmark) | | ✅ Uses typed function signatures. |
 
 ## How solutions are generated
 
-**Claude** — MAX effort mode in Claude Code, which means longer think times and higher cost ($$$). Think times are shown next to each checkmark in the table.
+**Claude** — MAX effort mode in Claude Code, which means longer think times and higher cost ($$$).
 
 **CurieTech** — some solutions are generated via the [curie-dataweave MCP server](https://www.curietech.ai/blog/the-curietech-ai-mcp-server-in-claude-code-and-codex) (connected to Claude Code over HTTP transport), and some are done directly in the chat at [platform.curietech.ai](https://platform.curietech.ai/).
 
@@ -38,9 +38,9 @@ scripts/
         transform.dwl       ← runs both solutions via Timer::time() and compares
 ```
 
-## Benchmarks
+## Exec Time
 
-Each benchmark script uses `dw::util::Timer::time()` to measure the execution time of each AI's solution against the real puzzle input, then returns the results side by side. Click any **▶ Open in Playground** link in the table above to run a benchmark in your browser.
+Each timing script uses `dw::util::Timer::time()` to measure the execution time of each AI's solution against the real puzzle input, then returns the results side by side. Click any **▶ Open in Playground** link in the table above to run it in your browser.
 
 Output looks like:
 
@@ -53,4 +53,3 @@ Output looks like:
 }
 ```
 
-> Note: the DataWeave Playground may take up to 30 minutes to reflect newly pushed changes.
