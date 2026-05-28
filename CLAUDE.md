@@ -46,6 +46,12 @@ When adding a new solution:
 3. Update `scripts/dayN/partN/benchmark/transform.dwl` to inline the new solution as a function and wrap it with `time()` alongside the other AI's solution
 4. Copy `input.txt` to `scripts/dayN/partN/benchmark/inputs/payload.txt` if not already there
 
+Workflow conventions:
+- Don't preemptively scaffold the benchmark, `input.txt`, or `output.txt` when only one AI's solution has been provided. Wait until the user supplies the other AI's script and the puzzle input/output. Only build the benchmark once both AI scripts exist.
+- `output.txt` contains just the expected answer (e.g. `17694`) with a trailing newline — no JSON wrapper.
+- When a notes cell has multiple bullets, separate with `<br>` and order them chronologically/causally (e.g. "Returned a Python script first" comes before "Wrong answer on the first try").
+- Notes apply per AI — if a behavior (e.g. "returned Python first") happened to both, add it to both the Claude Notes and Curie Notes cells.
+
 ## Exec Time
 
 Each `benchmark/transform.dwl` uses `dw::util::Timer::time()` to measure the execution time of both AI solutions against the real puzzle input, returning results side by side.
