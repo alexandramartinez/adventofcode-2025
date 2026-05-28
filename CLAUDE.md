@@ -39,6 +39,9 @@ The README tracks progress with a table. Each cell links to the solution file:
 - The **Exec Time** column links to the DataWeave Playground to run the timing script.
 - The **Claude Notes** and **Curie Notes** columns hold observations per AI. Use ❌ for negatives, ✅ for positives.
 - Markdown lists don't render inside table cells on GitHub — use plain text or `<br>` with bullet characters if needed.
+- A **General observations** section sits directly below the table for cross-puzzle patterns (e.g. styling habits one AI consistently uses, or Playground timeout caveats). Don't put per-puzzle quirks there.
+- When a row has a caveat covered by a General observations bullet, append `*` to the **Part** number in the table (e.g. `1 *`) and prefix the matching bullet with `**\***` so they cross-reference visually.
+- Per-AI timing comments (e.g. "Consistently times 1.1s+") go in that AI's notes cell as ❌ negatives, with the other AI's time in parentheses for context.
 
 When adding a new solution:
 1. Create the file at `scripts/dayN/partN/<ai>/transform.dwl`
@@ -51,6 +54,8 @@ Workflow conventions:
 - `output.txt` contains just the expected answer (e.g. `17694`) with a trailing newline — no JSON wrapper.
 - When a notes cell has multiple bullets, separate with `<br>` and order them chronologically/causally (e.g. "Returned a Python script first" comes before "Wrong answer on the first try").
 - Notes apply per AI — if a behavior (e.g. "returned Python first") happened to both, add it to both the Claude Notes and Curie Notes cells.
+- If the same observation applies to *every* puzzle (a styling habit, a tooling limitation), put it in the **General observations** section instead of repeating it in every row's notes cell. Remove it from the per-row cells when promoting it.
+- Subsequent parts of the same day reuse the same `input.txt` — copy from `scripts/dayN/part1/input.txt` to `scripts/dayN/part2/input.txt` rather than asking the user to paste it again.
 
 ## Exec Time
 
@@ -62,6 +67,8 @@ https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexan
 ```
 
 The README table has an **Exec Time** column with a **▶ Open in Playground** link for each day/part. Add one when creating a new timing script.
+
+The Playground has a request timeout around ~2.5s. Solutions that exceed this can't be benchmarked there — note them in the General observations section and tell users to run the script from the DataWeave VS Code extension instead.
 
 ## Claude solutions
 
