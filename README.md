@@ -8,10 +8,17 @@ DataWeave solutions to [adventofcode.com](https://adventofcode.com) puzzles, sol
 |-----|------|--------|-----------|-----------|-------------|-------------|
 | 1 | 1 | [script](scripts/day1/part1/claude/transform.dwl) | [script](scripts/day1/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday1%2Fpart1%2Fbenchmark) | | |
 | 1 | 2 | [script](scripts/day1/part2/claude/transform.dwl) | [script](scripts/day1/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday1%2Fpart2%2Fbenchmark) | | ❌ Needed 2 tries (wrong answer first). |
-| 2 | 1 | [script](scripts/day2/part1/claude/transform.dwl) | [script](scripts/day2/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart1%2Fbenchmark) | ❌ Needed 2 tries (DW error — no code execution). | ✅ Uses typed function signatures. |
-| 2 | 2 | [script](scripts/day2/part2/claude/transform.dwl) | [script](scripts/day2/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart2%2Fbenchmark) | | ✅ Uses typed function signatures. |
+| 2 | 1 | [script](scripts/day2/part1/claude/transform.dwl) | [script](scripts/day2/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart1%2Fbenchmark) | ❌ Needed 2 tries (DW error — no code execution). | |
+| 2 | 2 | [script](scripts/day2/part2/claude/transform.dwl) | [script](scripts/day2/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday2%2Fpart2%2Fbenchmark) | | |
 | 3 | 1 | [script](scripts/day3/part1/claude/transform.dwl) | [script](scripts/day3/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday3%2Fpart1%2Fbenchmark) | ❌ Returned a Python script first — had to ask for DW. | ❌ Returned a Python script first — had to ask for DW. |
 | 3 | 2 | [script](scripts/day3/part2/claude/transform.dwl) | [script](scripts/day3/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday3%2Fpart2%2Fbenchmark) | ❌ Wrong answer on the first try. | |
+| 4 | 1 | [script](scripts/day4/part1/claude/transform.dwl) | [script](scripts/day4/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday4%2Fpart1%2Fbenchmark) | | |
+| 4 | 2 | [script](scripts/day4/part2/claude/transform.dwl) | [script](scripts/day4/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday4%2Fpart2%2Fbenchmark) | | |
+
+### General observations
+
+- **CurieTech** consistently uses typed function signatures; **Claude** does not.
+- **Day 3 Part 1** — both solutions consistently take more than 2.5s, so the benchmark times out in the Playground and the Exec Time link can't be run there. Run it from VS Code (DataWeave extension) instead to see it in action.
 
 ## How solutions are generated
 

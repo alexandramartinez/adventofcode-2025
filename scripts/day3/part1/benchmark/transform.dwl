@@ -56,11 +56,11 @@ var curietechResult = time(() -> curietech())
 {
     "day3-part1": {
         claude: {
-            result:  claudeResult.result,
+            result:  claudeResult.result.total,
             timeMs:  claudeResult.end - claudeResult.start
         },
         curietech: {
-            result:  curietechResult.result,
+            result:  curietechResult.result.total,
             timeMs:  curietechResult.end - curietechResult.start
         }
     }
