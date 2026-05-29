@@ -16,12 +16,15 @@ DataWeave solutions to [adventofcode.com](https://adventofcode.com) puzzles, sol
 | 4 | 2 * | [script](scripts/day4/part2/claude/transform.dwl) | [script](scripts/day4/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday4%2Fpart2%2Fbenchmark) | ❌ Consistently times 25s+ (Curie 16s+). | |
 | 5 | 1 | [script](scripts/day5/part1/claude/transform.dwl) | [script](scripts/day5/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday5%2Fpart1%2Fbenchmark) | | |
 | 5 | 2 | [script](scripts/day5/part2/claude/transform.dwl) | [script](scripts/day5/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday5%2Fpart2%2Fbenchmark) | ❌ Same DW error on the first try. | ❌ Same DW error on the first try. |
+| 6 | 1 * | [script](scripts/day6/part1/claude/transform.dwl) | [script](scripts/day6/part1/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday6%2Fpart1%2Fbenchmark) | | ❌ Wrong answer on the first try.<br>❌ Returned an [extremely long, rambling explanation](scripts/day6/part1/curietech/explanation.md) while debugging. |
+| 6 | 2 | [script](scripts/day6/part2/claude/transform.dwl) | [script](scripts/day6/part2/curietech/transform.dwl) | [▶ Open in Playground](https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=alexandramartinez%2Fadventofcode-2025&path=scripts%2Fday6%2Fpart2%2Fbenchmark) | | |
 
 ### General observations
 
-- **CurieTech** consistently uses typed function signatures; **Claude** does not.
+- **CurieTech** sometimes uses typed function signatures; **Claude** never does.
 - **\*** **Day 3 Part 1** — both solutions consistently take ~2.5–2.7s, so the benchmark times out in the Playground and the Exec Time link can't be run there. Run it from VS Code (DataWeave extension) instead to see it in action.
 - **\*** **Day 4 Part 2** — both solutions take 10s+, way over the Playground's timeout. Run it from VS Code (DataWeave extension) to see it in action.
+- **\*** **Day 6 Part 1** — Curie returned a sprawling stream-of-consciousness debugging explanation alongside the solution. Saved separately in [explanation.md](scripts/day6/part1/curietech/explanation.md) so it doesn't drown out the table. May be related to a chat-state issue (the prior chat thread went blank afterward).
 
 ## How solutions are generated
 
