@@ -56,6 +56,8 @@ Workflow conventions:
 - Notes apply per AI — if a behavior (e.g. "returned Python first") happened to both, add it to both the Claude Notes and Curie Notes cells.
 - If the same observation applies to *every* puzzle (a styling habit, a tooling limitation), put it in the **General observations** section instead of repeating it in every row's notes cell. Remove it from the per-row cells when promoting it.
 - Subsequent parts of the same day reuse the same `input.txt` — copy from `scripts/dayN/part1/input.txt` to `scripts/dayN/part2/input.txt` rather than asking the user to paste it again.
+- If an AI hands back a long auxiliary write-up alongside the script (e.g. a sprawling debugging narrative), save it as `explanation.md` (or similar) inside that AI's folder, link to it from the AI's notes cell, and don't inline the prose in the README. Treat the table as the index, not the body.
+- Images pasted into the chat are not files on disk — markdown `![](path)` only works for files saved in the repo. If the user wants screenshots embedded, ask them to save the files first; otherwise transcribe the visible content as text.
 
 ## Exec Time
 
